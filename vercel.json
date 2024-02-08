@@ -1,0 +1,63 @@
+
+{
+    "builds": [
+      {
+        "src": "index.js",
+        "use": "@vercel/node"
+      },
+      {
+        "src": "build/**",
+        "use": "@vercel/static"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/api/auth",
+        "dest": "index.js"
+      },
+      {
+        "src": "/api/auth/(.*)",
+        "dest": "index.js"
+      },
+      {
+        "src": "/api/notes",
+        "dest": "index.js"
+      },
+      {
+        "src": "/api/notes/(.*)",
+        "dest": "index.js"
+      },
+      {
+        "src": "/brands",
+        "dest": "index.js"
+      },
+      {
+        "src": "/brands/(.*)",
+        "dest": "index.js"
+      },
+      {
+        "src": "/users",
+        "dest": "index.js"
+      },
+      {
+        "src": "/users/(.*)",
+        "dest": "index.js"
+      },
+      {
+        "src": "/auth",
+        "dest": "index.js"
+      },
+      {
+        "src": "/auth/(.*)",
+        "dest": "index.js"
+      },
+      {
+        "src": "/",
+        "dest": "build/index.html"
+      },
+      {
+        "src": "/(.+)",
+        "dest": "build/$1"
+      }
+    ]
+  }

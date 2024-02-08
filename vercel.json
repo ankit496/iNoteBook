@@ -28,30 +28,6 @@
         "dest": "index.js"
       },
       {
-        "src": "/brands",
-        "dest": "index.js"
-      },
-      {
-        "src": "/brands/(.*)",
-        "dest": "index.js"
-      },
-      {
-        "src": "/users",
-        "dest": "index.js"
-      },
-      {
-        "src": "/users/(.*)",
-        "dest": "index.js"
-      },
-      {
-        "src": "/auth",
-        "dest": "index.js"
-      },
-      {
-        "src": "/auth/(.*)",
-        "dest": "index.js"
-      },
-      {
         "src": "/",
         "dest": "build/index.html"
       },

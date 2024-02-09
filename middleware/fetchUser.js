@@ -1,5 +1,5 @@
 const JWT=require('jsonwebtoken')
-const secret="thisisasecret"
+const secret=process.env.SECRET
 const User=require('../models/User')
 const fetchuser=async(req,res,next)=>{
     const token=req.header('auth-token')

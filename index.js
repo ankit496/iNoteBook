@@ -12,13 +12,13 @@ app.use(cors())
 app.use(express.static(path.join(__dirname,"build")))
 
 connectMongoose()
-const port=process.env.PORT
+const port=process.env.PORT||5000
 
 //available routes
 const {notesRoute,authRoute}=require('./routes/index.js')
 app.use('/api/auth',authRoute)
 app.use('/api/notes',notesRoute)
 
-app.listen(5000,()=>{
+app.listen(port,()=>{
     console.log('App started on port',port)
 })
